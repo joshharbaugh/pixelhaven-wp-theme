@@ -54,10 +54,9 @@
 	<footer>
 	          <div class="inner">
                     	<div class="clearfix">
-                    	          <div class="article reading">
-					<h2>Pixelhaven LLC</h2>
-		                              <p>8106 Logans Ridge Drive<br>West Chester, Ohio 45069<br />
-		                              +1 740 202 0906 | <a href="mailto:josh@pixelhaven.co">josh@pixelhaven.co</a></p>
+                    	  <div class="article reading">
+                          <h2>Pixelhaven LLC</h2>
+                          <p>6701 Woodland Trace Court<br>Liberty Township, Ohio 45044<br />+1 740 202 0906 | <a href="mailto:josh@pixelhaven.co">josh@pixelhaven.co</a></p>
 		                    </div>
 		                    <div class="article">
 		                              <h2>Follow Pixelhaven</h2>
