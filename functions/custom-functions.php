@@ -390,10 +390,10 @@ class RecentPostsFooterWidget extends WP_Widget {
 			<?php if ( $title ) echo $before_title . $title . $after_title; ?>
 			<?php while ($r->have_posts()) : $r->the_post(); ?>
 			<div class="content" id="blog-entry">
-			          <div class="date"><?php echo get_the_date(); ?></div>
+				<div class="date"><?php echo get_the_date(); ?></div>
 				<?php
 				if ( has_post_thumbnail() ) { ?>
-					<a href="<?php the_permalink() ?>" title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>">
+					<a class="clearfix" href="<?php the_permalink() ?>" title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>">
 					<?php the_post_thumbnail( 'footer_thumb' ); ?>
 					</a>
 				<?php } ?>

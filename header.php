@@ -1,3 +1,5 @@
+<?php //error_reporting(E_ALL); ?>
+<?php include(dirname(__FILE__) . '/includes/twitter.class.php') ?>
 <?php include(dirname(__FILE__) . '/includes/goodreads.class.php') ?>
 <?php include(dirname(__FILE__) . '/includes/lastfm.class.php') ?>
 <?php include(dirname(__FILE__) . '/includes/netflix.class.php') ?>
@@ -46,13 +48,13 @@
 	?></title>
 <meta name="revisit-after" content="14 days" />
 <meta name="viewport" content="initial-scale=1.0,width=device-width">
-<link rel="stylesheet" type="text/css" media="all" href="http://www.pixelhaven.co/wp-content/themes/pixelhaven/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'wpurl' ); ?>/wp-content/themes/pixelhaven/style.css" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<script type="text/javascript" src="http://use.typekit.com/knr8eyo.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script src="https://use.typekit.net/znw3dwn.js"></script>
+<script>try{Typekit.load({ async: false });}catch(e){}</script>
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
@@ -76,21 +78,25 @@
                          <div class="inner">
                               <div id="twitter" class="tweet">
                                    <blockquote id="twitter_update_list">
-									<p>Loading latest tweet...</p>
+					<?php $Tweets = new Tweets('pixelhavenllc'); ?>
+                                    	<?php $latestTweets = $Tweets->getLatestTweet(); ?>
+                                    	<?php foreach($latestTweets as $tweet) { ?>
+                                    	<p><?php echo $tweet->text; ?> <a href="http://twitter.com/<?php echo $tweet->screen_name; ?>">@<?php echo $tweet->screen_name; ?></a></p>
+                                    	<?php } ?>
                                    </blockquote>
                               </div>
-                              <div id="availability" class="right">Availability: <a onclick="window.open(this.href,  null, 'height=1323, width=680, toolbar=0, location=0, status=1, scrollbars=1, resizable=1'); return false" href="http://pixelhaven.wufoo.com/forms/z7x3k7/" title="Website Project Sheet">Accepting new projects &rarr;</a>
+                              <div id="availability" class="right">Availability:<!-- <em>Sorry, not accepting new projects</em>--> <a onclick="window.open(this.href,  null, 'height=1323, width=680, toolbar=0, location=0, status=1, scrollbars=1, resizable=1'); return false" href="http://pixelhaven.wufoo.com/forms/z7x3k7/" title="Website Project Sheet">Accepting new projects &rarr;</a>
                               </div>
                          </div>
                   </div>
                   <div class="inner highlight">
 						<nav class="clearfix">
-                            <div id="logo"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php dirname(__FILE__)?>/images/logo.gif" alt="Pixelhaven, a web design studio" /></a></div>
+                            <div id="logo"><a style="display: block; height: 69px; overflow: hidden;" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>: Portfolio of Josh Harbaugh" rel="home"><img src="<?php dirname(__FILE__)?>/images/logo.gif" alt="" /></a></div>
                             <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 						</nav>
 						<?php if( is_home() || is_front_page() ) : ?>
 						<div class="headline clearfix" id="work">
-							<h1>We build websites</h1>
+							<h1>Building websites</h1>
 							<h2>And just about anything else</h2>
 							<?php if ( is_active_sidebar( 'portfolio-widget-area' ) ) : ?>
 							<ul>

@@ -2,10 +2,11 @@
 ------------------------------------------------ */
 
 body {
-	min-width: 960px;
+	width: 100%;
 }
 .inner {
-	width: 960px;
+	max-width: 960px;
+	width: 100%;
 	margin: 0 auto;
 }
 #container {
@@ -26,6 +27,7 @@ header.narrow #work {
 }
 div.highlight {
 	background: url(../images/header_highlight.png) no-repeat 0 -1px;
+	background-size: contain;
 	height: 100%;
 }
 #top, #bottom {
@@ -42,7 +44,8 @@ div.highlight {
 #top div.tweet {
 	float: left;
 	display: block;
-	width: 720px;
+	max-width: 720px;
+	width: 100%;
 	background: url(../images/twitter.gif) no-repeat 0 -2px;
 }
 #top div.tweet blockquote {
@@ -65,10 +68,12 @@ div.highlight {
 }
 .headline {
 	float: left;
-	width: 960px;
+	max-width: 960px;
+	width: 100%;
 	height: 476px;
 	margin: 0;
 	background: url(../images/slide.png) no-repeat 0 5px;
+	background-size: contain;
 }
 .headline h1 {
 	text-align: center;
@@ -139,19 +144,22 @@ a.button, input[type="submit"], .wpcf7-submit {
 ------------------------------------------------ */
 
 nav {
-	width: 960px;
+	max-width: 960px;
+	width: 100%;
 	padding: 60px 0 30px;
 }
 nav #logo {
 	float: left;
-	width: 240px;
+	max-width: 240px;
+	width: 100%;
 }
 nav #logo a {
 	border: none;
 }
 nav ul {
 	float: right;
-	width: 620px;
+	max-width: 620px;
+	width: 100%;
 	margin-top: 25px;
 }
 nav ul li {
@@ -162,7 +170,7 @@ nav ul li a {
 }
 nav ul li a {
 	border: none;
-	font-family: "franklin-gothic-ext-comp-urw-1","franklin-gothic-ext-comp-urw-2",Oswald,sans-serif;
+	font-family: "franklin-gothic-ext-comp-urw",Oswald,sans-serif;
 	font-size: 18px;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -294,7 +302,7 @@ h1.entry-title {
 .archive .post .entry-meta .alignleft, .page .page .entry-meta .alignleft, .single .post .entry-meta .alignleft, .single .portfolio .entry-meta .alignleft {
 	width: 80px;
 	float: left;
-	font: normal 15px/1.6 "franklin-gothic-ext-comp-urw-1","franklin-gothic-ext-comp-urw-2",Oswald,sans-serif;
+	font: normal 15px/1.6 "franklin-gothic-ext-comp-urw",Oswald,sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: #999;
@@ -315,7 +323,8 @@ h1.entry-title {
 	line-height: 24px;
 }
 .archive .post .entry-summary, .single .post .entry-summary, .single .portfolio .entry-summary {
-	width: 660px;
+	max-width: 660px;
+	width: 100%;
 	float: left;
 }
 .archive .post .entry-summary h3, .single .post .entry-summary h3, .single .portfolio .entry-summary h3, #author-description h3 {
@@ -331,7 +340,7 @@ h1.entry-title {
 	padding: 15px 0;
 }
 .archive .post .entry-summary blockquote p, .single .post .entry-summary blockquote p, .single .portfolio .entry-summary blockquote p, .entry-content blockquote p {
-	font-family: "skolar-1","skolar-2","Droid Serif",serif;
+	font-family: "skolar","Droid Serif",serif;
 	font-size: 24px;
 	font-style: italic;
 	line-height: 30px;
@@ -359,13 +368,15 @@ h1.entry-title {
 }
 .single .portfolio .entry-summary img {
 	margin-bottom: 2em;
+	max-width: 100%;
 }
 #nav-above {
 	border-bottom: 1px dashed #ccc;
 	margin: 0 20px 60px;
 	padding-bottom: 10px;
 	display: inline-block;
-	width: 900px;
+	max-width: 900px;
+	width: 100%;
 }
 #nav-above .nav-next {
 	background: url(../images/arrow-left.png) no-repeat 0 5px;
@@ -404,7 +415,7 @@ h1.entry-title {
 }
 .about, .testimonials {
 	width: 100%;
-	margin: 40px 0 0 20px;
+	margin: 40px 0 0 0;
 	padding-bottom: 22px;
 }
 .about h2 {
@@ -422,7 +433,7 @@ h1.entry-title {
 	padding-bottom: 12px;
 }
 .about h2 small {
-	font-family: "skolar-1","skolar-2","Droid Serif",serif;
+	font-family: "skolar","Droid Serif",serif;
 	font-size: 14px;
 	line-height: 22px;
 }
@@ -449,17 +460,21 @@ section.main {
 }
 .home .headline ul {
 	margin: 35px auto 0;
-	width: 960px;
+	max-width: 960px;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
 }
 .home .thumbnail {
 	position: relative;
-	margin-left: 17px;
+	margin-left: 0;
 	list-style: none;
 }
 .thumbnail {
 	float: left;
-	width: 219px;
-	height: 157px;
+	max-width: 199px;
+	width: 22%;
+	height: 137px;
 	top: 90px;
 	background-color: #fff;
 	-moz-border-radius: 10px;
@@ -468,15 +483,22 @@ section.main {
 	-moz-box-shadow: 1px 1px 0px #111;
 	-webkit-box-shadow: 1px 1px 0px #111;
 	box-shadow: 1px 1px 0px #111;
+	overflow: hidden;
 }
 .thumbnail a {
-	display: block;
-	width: 199px;
+	display: flex;
+	justify-content: center;
+	max-width: 199px;
+	width: 100%;
 	height: 137px;
 	background: url(../images/zoom.gif) no-repeat 0 0;
 	text-align: center;
-	margin: 10px auto 0;
+	margin: 0 auto;
 	border: none;
+}
+.thumbnail a:hover img {
+	opacity: .35;
+	transition: opacity .3s linear;
 }
 .thumbnail h2 {
 	opacity: 0;
@@ -484,7 +506,8 @@ section.main {
 	-moz-opacity: 0;
 	position: absolute;
 	padding: 0;
-	width: 199px;
+	max-width: 199px;
+	width: 100%;
 	height: 137px;
 }
 .reading {
@@ -651,7 +674,7 @@ footer h3, footer p, #blog-entry div.date {
 	text-shadow: #222 1px 1px 0px;
 }
 footer .titleHover em {
-	font: 11px/16px "skolar-1","skolar-2","Droid Serif",serif;
+	font: 11px/16px "skolar","Droid Serif",serif;
 	font-style: normal;
 	color: #D95B43;
 }
@@ -664,7 +687,8 @@ footer .titleHover em {
 .page-id-11 .page {
 	margin: 0 0.5em;
 	padding-top: 40px;
-	width: 960px;
+	max-width: 960px;
+	width: 100%;
 }
 .page-id-11 .page .entry-content {
 	padding-left: 0;
@@ -701,6 +725,7 @@ footer .titleHover em {
 .tax-portfolio_cat .page {
 	padding-top: 0;
 	margin-left: 0;
+	width: 100%;
 }
 .page-template-portfolio-page-php .page div.entry-content,
 .tax-portfolio_cat .page div.entry-content {
@@ -709,11 +734,13 @@ footer .titleHover em {
 .page-template-portfolio-page-php .main div.article,
 .tax-portfolio_cat .main div.article {
 	margin-left: 0;
-	width: 960px;
+	max-width: 960px;
+	width: 100%;
 }
 .page-template-portfolio-page-php #primary .widget_categories form,
 .tax-portfolio_cat #primary .widget_categories form {
-	width: 960px;
+	max-width: 960px;
+	width: 100%;
 	overflow: hidden;
 	margin-left: 0;
 	border-top: 1px solid #ddd;
@@ -798,8 +825,10 @@ footer .titleHover em {
 .tax-portfolio_cat ul#examples {
 	margin: 0 0.5em;
 	float: left;
-	display: hidden;
-	width: 960px;
+	display: flex;
+	justify-content: space-evenly;
+	max-width: 960px;
+	width: 100%;
 	padding-bottom: 50px;
 }
 .page-template-portfolio-page-php #primary .thumbnail,
@@ -808,7 +837,7 @@ footer .titleHover em {
 	-moz-box-shadow: 1px 1px 0px #ccc;
 	-webkit-box-shadow: 1px 1px 0px #ccc;
 	box-shadow: 1px 1px 0px #ccc;
-	margin: 0 0 42px 17px;
+	margin: 0 0 42px 0;
 	margin-bottom: 0;
 	padding-bottom: 0;
 	list-style: none;
@@ -823,7 +852,8 @@ footer .titleHover em {
 }
 .page-template-portfolio-page-php #primary ul li.widget-container,
 .tax-portfolio_cat #primary ul li.widget-container {
-	width: 960px;
+	max-width: 960px;
+	width: 100%;
 	text-align: center;
 }
 
@@ -833,7 +863,8 @@ footer .titleHover em {
 ------------------------------------------------ */
 
 .page-id-14 .post-14 {
-	width: 900px;
+	max-width: 900px;
+	width: 100%;
 }
 .page-id-14 .wpcf7 div label {
 	width: 100px;
@@ -1000,12 +1031,31 @@ a { transition: color 0.3s; -moz-transition: color 0.3s; -ms-transition: color 0
 -------------------------------------------------------------- */
 
 @media screen and (max-width:600px) {
-	#top, section .reading, footer .article:last-child {display:none;}
+	body {overflow-x: hidden;}
+	section .reading, footer .article:last-child {display:none;}
 	.inner, .headline {width:100%;}
+	.headline {background-position-y: -50px;background-position-x: center;background-size: cover;}
 	nav #logo {float:none;margin:0 auto;}
 	nav {width:auto;padding-top:20px;}
-	nav ul {float:none;width:50%;margin:24px auto;text-align:center;}
+	nav ul {float:none;width:100%;margin:24px auto 0;text-align:center;display:flex;justify-content:center;flex-direction:row-reverse;}
 	nav ul li {display:inline;float:none;text-align:center;}
+	nav #menu-main-navigation a {padding-left: 12px; padding-right: 12px;}
 	header.narrow {height:200px;}
 	.article, footer .reading {width:100%;}
+	div.highlight {background-size: cover;}
+	.headline h1 {font-size:75px;top:0;}
+	.headline h2 {font-size:14px;}
+	.thumbnail {top: 120px;}
+	.home .about p {width:95%;}
+	.archive .post, .page .page, .single .post, .single .portfolio {float:none;margin-left:0;}
+	.archive .post .entry-meta, .page .page .entry-meta, .single .post .entry-meta, .single .portfolio .entry-meta {float:none;border-left:none;width:94%;padding-bottom:20px;}
+	.archive .post .entry-summary, .single .post .entry-summary, .single .portfolio .entry-summary {padding-left:0;}
+	#nav-above {margin-left: 0; margin-right: 0;}
+	.page-id-11 .page h2.entry-title, .page-template-portfolio-page-php .main h2 {padding-left:20px;padding-right:20px;padding-bottom:20px;}
+	.page-id-11 .entry-content article {width: 100%;margin: 0;}
+}
+
+@media screen and (min-width:601px) and (max-width:960px) {
+	nav ul {width: 65%;}
+	.headline {background-position-y: bottom;}
 }

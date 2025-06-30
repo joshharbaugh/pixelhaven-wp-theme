@@ -19,11 +19,14 @@ get_header(); ?>
 		<div class="inner" style="background: url(<?php echo THEME_DIR; ?>/images/section_shadow.jpg) no-repeat center bottom;">
 			<div class="clearfix">
 				<a name="about"></a>
-				<h1>Pixelhaven is a small<br /><strong>web design studio</strong></h1>
-				<h2>Led by designer <a href="http://www.twitter.com/joshharbaugh" target="_blank">@joshharbaugh</a> located in the city of Cincinnati, Ohio</h2>
+				<h1><strong>Hi, I'm Josh Harbaugh</strong></h1>
+				<h2 style="letter-spacing: 0.125em; text-transform: inherit">
+					A frontend developer with 15+ years of experience creating web applications and user interfaces.<br />
+					This is my digital portfolio showcasing selected projects and explorations.
+				</h2>
 				<div class="about">
-					<p>In the intimidating world of bits-n-bytes Pixelhaven is here to lead you through the wilderness and into the exciting realm that is the world wide web.</p>
-					<p>Pixelhaven is passionate about creating attractive, easy to use, and structurally clean web sites &ndash; using the latest in <a href="http://www.webstandards.org/">web standards</a>.</p>
+					<p>In the intimidating world of bits-n-bytes Pixelhaven exists to explore the intersection of design, code, and user experience.</p>
+					<p>I am passionate about creating attractive, easy-to-use, and structurally clean web sites &ndash; using the latest in <a href="http://www.webstandards.org/">web standards</a>.</p>
 				</div>
 			</div>
 		</div>
