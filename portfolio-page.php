@@ -26,7 +26,7 @@ get_header(); ?>
 <?php if ( is_active_sidebar( 'portfolio-widget-area' ) ) : ?>
 				<div class="page">
 				          <div class="entry-content">
-				                    <ul id="examples">
+				                    <ul id="examples" style="flex-wrap: wrap; justify-content: center; gap: 20px;">
 				                              <?php dynamic_sidebar( 'portfolio-widget-area' ); ?>
 						</ul>
 					</div>

@@ -55,7 +55,7 @@
                     	<div class="clearfix">
                     	  <div class="article reading">
                           <h2>Pixelhaven LLC</h2>
-                          <p>Williamstown, Kentucky 41097<br />+1 740 202 0906 | <a href="mailto:josh@pixelhaven.co">josh@pixelhaven.co</a></p>
+                          <p>Williamstown, Kentucky 41097<br />+1 740 202 0906 | <a href="mailto:pixelhavenllc@gmail.com">Email</a></p>
 		                    </div>
 		                    <div class="article">
 		                              <h2>Follow Pixelhaven</h2>

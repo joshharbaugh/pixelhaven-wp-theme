@@ -24,7 +24,7 @@ class Theme_Latest_Portfolio extends WP_Widget {
 		
 		$args = array(
 				'post_type' => 'portfolio',
-				'posts_per_page' => '4'
+				'posts_per_page' => '6'
 				);
 		
 		$portfolio_posts_query = new WP_Query($args);
@@ -44,7 +44,7 @@ class Theme_Latest_Portfolio extends WP_Widget {
 				$taxonomy = join( " ", $terms_links );
                               endif;
 		?>
-			<li class="thumbnail <?php echo strtolower($taxonomy); ?>" data-categories="<?php echo strtolower($taxonomy); ?>">
+			<li class="thumbnail <?php echo strtolower($taxonomy); ?>" style="min-width: 199px; width: 100%;" data-categories="<?php echo strtolower($taxonomy); ?>">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 					<img src="<?php echo portfolio_thumbnail(); ?>" alt="<?php the_title(); ?>" />
 				</a>

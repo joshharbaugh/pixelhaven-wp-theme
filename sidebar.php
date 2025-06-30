@@ -41,7 +41,7 @@
 
 <?php	endif; // end primary widget area ?>
 			</ul>
-			<nav id="filter">
+			<nav id="filter" style="display: none">
 			          <ul>
                                                   <li>
 						<a title="Show all" data-filter="*" href="#">All</a>

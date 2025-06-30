@@ -99,7 +99,7 @@
 							<h1>Building websites</h1>
 							<h2>And just about anything else</h2>
 							<?php if ( is_active_sidebar( 'portfolio-widget-area' ) ) : ?>
-							<ul>
+							<ul style="justify-content: center; gap: 20px;">
 								<?php dynamic_sidebar( 'portfolio-widget-area' ); ?>
 							</ul>
 							<?php endif; ?>
