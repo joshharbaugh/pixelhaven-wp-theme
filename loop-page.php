@@ -21,7 +21,7 @@
 					<?php if ( is_front_page() ) { ?>
 							<h2 class="entry-title"><?php the_title(); ?></h2>
 					<?php } elseif ( is_page("services") ) { ?>
-							<h2 class="entry-title">We can provide a wide variety of design &amp; development services</h2>
+							<h2 class="entry-title">I can provide a wide variety of design &amp; development services</h2>
 					<?php } else { ?>
 							<h1 class="entry-title"><?php the_title(); ?></h1>
 					<?php } ?>
